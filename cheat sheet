@@ -1,0 +1,57 @@
+import numpy as np
+import pandas as pd
+
+
+
+Get your data into a DataFrame
+df = DataFrame()
+
+Load data
+df = pd.read_csv('file.csv') # often works
+df = pd.read_csv('file.csv', header=0,)
+
+
+Working with the whole DataFrame
+df.info() # index & data types
+dfh = df.head(i) # get first i rows
+dft = df.tail(i) # get last i rows
+dfs = df.describe() # summary stats cols
+
+
+Sorting
+
+df = df.sort_values(by=col)
+df = df.sort_values(by=[col1, col2])
+df = df.sort_index()
+df = df.astype(dtype) # type conversion
+
+Column index and labels
+idx = df.columns # get col index
+label = df.columns[0] # first col label
+l = df.columns.tolist() # list of col labels
+a = df.columns.values # array of col labels
+
+
+Data type conversion
+
+t = df['col'].astype(str)# Series dtype
+a = df['col'].values # numpy array
+l = df['col'].tolist() # python list
+
+Append column
+df['Total'] = df.sum(axis=1)
+
+
+Dropping (deleting) columns (mostly by label)
+df = df.drop('col1', axis=1)
+df.drop('col1', axis=1, inplace=True)
+df = df.drop(['col1','col2'], axis=1)
+s = df.pop('col') # drops from frame
+
+
+Dropping rows (by name)
+df = df.drop('row_label')
+df = df.drop(['row1','row2']) # multi-row
+
+
+

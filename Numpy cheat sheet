@@ -1,0 +1,46 @@
+
+The NumPy library is the core library for scientific computing in
+Python. 
+Numpy as np
+Creating array
+a=np.array([1,2,3]) #creating a 1D array
+
+b=np.array([(1,2,3,4),(7,8,9,10)],dtype=int) #creating a 2D array
+
+np.zeros(3) - 1D array of length 3 all zeros
+np.random.rand(3,5) - 3x5 array of random floats between 0-1
+
+
+    size – Returns number of elements in array
+    shape – Returns dimensions of array(rows, columns)
+    array.dtype – Returns type of elements in array
+    axis1 =column
+    axis0 = rows
+
+Arithmatic op.
+
+Addition: np.add(a,b)
+Subtraction:np.subtract(a,b)
+Multiplication: np.multiply(a,b)
+Division: np.divide(a,b)
+Exponentiation: np.exp(a)
+Square Root: np.sqrt(b)
+
+
+
+ array.reshape(2,3) - Reshapes array to 2 rows, 3 columns without changing data.
+ 
+ 
+np.concatenate((array1,array2),axis=0) - Adds array2 as rows to the end of array1
+np.concatenate((array1,array2),axis=1) - Adds array2 as columns to end of array1
+
+
+Adding commands:
+• np.append(array,values) - Appends values to end of array
+• np.insert(array,4,values) - Inserts values into array before index 4
+
+
+Remove commands :
+• np.delete(array,2,axis=0) - Deletes row on index 2 of array
+• np.delete(array,3,axis=1) - Deletes column on index 3 of
+array
